@@ -14,6 +14,9 @@
 	<name>taco-cloud</name>
 	<description>Taco Cloud Example</description>
 
+	<properties>
+		<java.version>10</java.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
