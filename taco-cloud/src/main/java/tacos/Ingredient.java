@@ -1,5 +1,8 @@
 package tacos;
 
+import lombok.Data;
+
+@Data
 public class Ingredient {
 	
 	private final String id;
@@ -11,6 +14,7 @@ public class Ingredient {
 		WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
 		
 	}
+
 	
 	public Ingredient (String id, String name, Type type) {
 		
@@ -19,6 +23,8 @@ public class Ingredient {
 		this.type = type;
 		
 	}
+	
+
 
 	public String getId() {
 		return id;

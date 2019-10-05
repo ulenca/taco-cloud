@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(HomeController.class)
+@WebMvcTest(tacos.web.HomeController.class)
 public class HomeControllerTest {
 	
 	@Autowired
