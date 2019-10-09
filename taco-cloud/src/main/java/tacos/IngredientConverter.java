@@ -31,8 +31,7 @@ public Ingredient convert(String source) {
 
       for (Ingredient ingredient : ingredients) {
 
-        // You may use equal() method
-        if (ingredient.getId() == source)
+        if (ingredient.getId().equals(source))
 
             return ingredient;
       }

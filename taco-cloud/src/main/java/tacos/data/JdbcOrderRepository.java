@@ -55,15 +55,29 @@ public class JdbcOrderRepository implements OrderRepository{
 		Map<String,Object> values = new HashMap<>();
 		values.put("tacoOrder", orderId);
 		values.put("taco", taco.getId());
+		values.forEach((key, value) -> System.out.println(key + ":" + value));
 		orderTacoInserter.execute(values);
 		
 	}
 
 	private long saveOrderDetails(Order order) {
 		
-		Map<String,Object> values = 
-				objectMapper.convertValue(order, Map.class);
-		values.put("placedAt", order.getPlacedAt());
+		Map<String,Object> values = new HashMap<>();
+		values.put("ID", order.getId());
+		values.put("PLACEDAT", order.getPlacedAt());
+		values.put("DELIVERYNAME", order.getName());
+		values.put("DELIVERYSTREET", order.getStreet());
+		values.put("DELIVERYCITY", order.getCity());
+		values.put("DELIVERYSTATE", order.getState());
+		values.put("DELIVERYZIP", order.getZip());
+		values.put("CCNUMBER", order.getCcNumber());
+		values.put("CCEXPIRATION", order.getCcExpiration());
+		values.put("CCCVV", order.getCcCVV());
+		
+//		objectMapper.convertValue(order, Map.class);
+		
+		System.out.println("order map");
+		values.forEach((key, value) -> System.out.println(key + ":" + value));
 		
 		long orderId = orderInserter
 				.executeAndReturnKey(values)

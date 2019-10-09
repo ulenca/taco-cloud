@@ -37,6 +37,13 @@ public class Ingredient {
 	public Type getType() {
 		return type;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Ingredient [name=" + name + "]";
+	}
 	
 	
 

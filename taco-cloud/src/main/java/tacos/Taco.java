@@ -35,5 +35,10 @@ public class Taco {
 	public void setIngredients(List<Ingredient> ingredients) {
 		this.ingredients = ingredients;
 	}
+	
+	@Override
+	public String toString() {
+		return "Taco [id=" + id + ", createdAt=" + createdAt + ", name=" + name + ", ingredients=" + ingredients + "]";
+	}
 
 }
